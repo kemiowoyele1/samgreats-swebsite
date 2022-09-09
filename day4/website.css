@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(245, 216, 216);
+}
+h1{
+    text-align: center;
+    padding: 5px 3px;
+    color: rgb(5, 50, 110);
+}
+nav{
+    background: linear-gradient(90deg, rgb(5, 50, 110),rgb(115, 163, 226),rgb(5, 50, 110));
+    font-size: 20px;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+  
+}
+nav a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 20px;
+    transition: 1.08s;
+}
+nav a:hover{
+    background-color: rgb(5, 50, 110);
+    border-radius: 5%;
+   
+
+}
+.show{
+    height: 400px;
+    width: 60vw;
+    background-color: aquamarine;
+    display: block;
+    margin: 20px auto;
+    background-image: url('image2/image3.jpg');
+    background-size: 100% 100%;
+}
+section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+.item{
+    margin-top: 20px;
+    transition: 1.04;
+    padding-bottom: 5px;
+
+
+}
+.item:hover{
+    transform: scale(1.04);
+
+}
+img{
+    height: 300px;
+    width: 100%;
+}
+h4{
+    text-align: center;
+    color: rgb(5, 50, 110);
+    margin: 5px auto;
+}
+button{
+    padding: 10px 30px;
+    background-color: rgb(5, 50, 110);
+    border-radius: 5px;
+    color: white;
+    border: none;
+    margin: 0 auto;
+    display: block;
+    transition: 1.08s;   
+}
+button:hover{
+    transform: scale(1.04);
+}
+footer{
+    padding: 20px;
+   background: linear-gradient(90deg, rgb(5, 50, 110),rgb(115, 163, 226),rgb(5, 50, 110));
+     text-align: center;  
+    font-size:19px ; 
+    color: #fff;
+    text-shadow: 0.5px 0.5px rgb(0, 44, 0);
+    margin-top: 50px;
+    padding-top: 100px;
+}
+
+@media (max-width: 1000px){
+    .items{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px){
+    .items{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

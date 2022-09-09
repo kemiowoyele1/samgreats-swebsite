@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intro to CSS</title>
+    <style>
+        *{
+            font-weight: bold;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            padding: 40px;
+        }
+        p{
+            color: brown;
+        }
+        .simple{
+            color: rgb(255, 60, 0);
+        }
+        .headings{
+            text-align: center;
+            text-decoration: underline;
+            text-decoration-color: chocolate;
+            margin-bottom: 20px;
+            color: rgb(13, 59, 145);
+        }
+       div div div div{
+        color: goldenrod;
+        font-size: 50px;
+        
+       }
+       div div div{
+        font-size: 30px;
+       }
+       div{
+       color: goldenrod;
+      
+       }
+    </style>
+</head>
+<body>
+    <h1 class="headings">Introduction to CSS</h1>
+    <h2 class="headings">CSS Selectors</h2>
+    <h3 class="headings">simple selectors</h3>
+    <ul>
+    <li class="simple">name selector</li>
+    <li class="simple">class selector
+    </li>
+    <li class="simple">id selector</li>
+    <li class="simple">universal selector (*) used to select all the elements in a file</li>
+    <li class="simple">grouping selector</li>
+    <p>grouping selector allows you to use more than one selector at a time with each selector seperated with a comma(,). Example,
+        <br>
+        <code>
+           .simple, .headings, p{
+                text-shadow: 1px 1px red;
+            }
+        </code>
+    </p>
+    </ul>
+    <h3 class="headings">combinator selectors</h3>
+    <p>with combinator selectors, you select based on relationships</p>
+    <div>
+        <span>great grand father</span>
+        <div>
+            grand father
+            <div>
+                father
+                <div>
+                    boy
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

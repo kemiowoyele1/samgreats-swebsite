@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS continued</title>
+    <style>
+        body{
+            padding: 50px;
+        }
+        h1, h3{
+            text-align: center;
+            text-decoration: underline;
+            text-decoration-style: double;
+            text-transform: uppercase;
+            font-weight: 900;
+            background: rgb(255,8,8);
+             background: linear-gradient(90deg, rgba(255,8,8,1) 0%, rgba(251,198,0,1) 22%, rgba(45,121,9,1) 36%, rgba(203,44,238,1) 55%, rgba(39,33,230,1) 68%, rgba(0,212,255,1) 82%, rgba(255,0,5,1) 100%), url(images.jfif);
+ 
+background-clip: text;
+background-blend-mode: screen;
+  -webkit-background-clip:  text;
+  color: rgba(0, 0, 0, 0.164);
+width: fit-content;
+background-size: 100% 100%;
+        }
+        .box{
+             width: 100px;  
+            height: 100px; 
+            border: 20px groove  rgb(189, 80, 171);
+            padding: 10px;
+            margin: 20px;
+            background-color: aqua;
+            border-style: dotted dashed solid double;
+            border-radius: 50% 10% 30% 0;
+            text-align: center;
+            outline: 10px outset orangered;
+            /* border-image: url(images.jfif) 30 stretch; */
+
+        }
+        li{
+            text-transform: capitalize;
+            letter-spacing: 1px;
+            line-height: 20px;
+            color: rgb(1, 8, 32);
+            text-shadow: .5px .5px 5px rgb(0, 0, 0);
+            font-size: 1.3em;
+        }
+        p{
+            color: rgb(6, 40, 44);
+            background-color: aqua;
+            text-indent: 50px;
+            word-spacing: 20px;
+       
+            
+        }
+        .gradient{
+             width: 200px;
+            height: 200px; 
+            border: 5px groove  rgb(93, 189, 80);
+            padding: 10px;
+            margin: 20px;
+            outline: 1px outset rgb(255, 217, 0);
+            text-align: center;
+            display: inline-block;
+            background: rgb(122,119,164);
+background: linear-gradient(27deg, rgba(122,119,164,1) 0%, rgba(6,5,79,1) 14%, rgba(45,121,9,1) 28%, rgba(129,7,156,1) 47%, rgba(65,75,75,1) 60%, rgba(0,212,255,1) 100%);
+        }
+        .radial{
+            background: rgb(122,119,164);
+background: radial-gradient(circle, rgba(122,119,164,1) 0%, rgba(6,5,79,1) 14%, rgba(45,121,9,1) 28%, rgba(129,7,156,1) 47%, rgba(65,75,75,1) 60%, rgba(0,212,255,1) 100%);
+        }
+        .conic{
+            background-image: conic-gradient(red,blue,yellow,brown,pink,purple,grey,black);
+        }
+       .animate{
+        animation: move 10s infinite;
+        background: rgb(122,119,164);
+background: radial-gradient(circle,  rgba(129,7,156,1) 47%, rgba(65,75,75,1) 60%, rgba(0,212,255,1) 100%);
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        position: relative;
+       }
+       @keyframes move {
+        0%{
+            left: 0%;
+        } 
+        100%{
+            left: 100%;
+        }
+       }
+       .animate:hover{
+        animation-play-state: paused;
+       }
+       .transit{
+        background: rgb(122,119,164);
+background: radial-gradient(circle,  rgba(129,7,156,1) 47%, rgba(65,75,75,1) 60%, rgba(0,212,255,1) 100%);
+        height: 100px;
+        width: 100px;
+        border-radius: 100%;
+        transition: all 2s;
+        position: relative;
+       }
+       .transit:hover{
+        width: 500px;
+       background: brown;
+       }
+       .transform{
+        background: rgb(122,119,164);
+background: radial-gradient(circle,  rgb(7, 156, 74) 47%, rgb(18, 167, 13) 60%, rgb(182, 21, 61) 100%);
+        height: 100px;
+        width: 100px;
+        border-radius: 100px;
+        position: relative;
+       }
+       .rotate{
+        animation: rotate .1s infinite;
+       }
+        @keyframes rotate {
+        0%{
+            transform: rotate(360deg);
+     } 
+        100%{
+            transform: rotate(0deg);
+      }
+       }
+       .skew{
+        transform: skew(40deg);
+        border-radius: 0;
+        animation: skew 4s infinite;
+     
+       }
+       
+       @keyframes skew {
+        0%, 100%{
+            transform: skew(-40deg);
+               } 
+        50%{
+            transform: skew(40deg);
+         }
+       }
+       .translate{
+        border-radius: 0;
+        animation: translate 2s infinite;
+        margin-bottom: 100px;
+       }
+       @keyframes translate {
+        0%{
+            transform: translate(100%, 0%);
+        } 
+        100%{
+            transform: translate(10%, 10%);
+        }
+       }
+       .scale{
+        border-radius: 0;
+        animation: scale 2s infinite;
+        margin-bottom: 100px;
+       }
+       @keyframes scale {
+        0%{
+            transform: scale(100%, 100%);
+        } 
+        100%{
+            transform: scale(50%, 50%);
+        }
+       }
+       .filter{
+        width: 200px;
+        height: 200px;
+        background-image: url("images.jfif");
+        background-size: 100% 100%;
+        color: rgb(0, 0, 0);
+        text-shadow: 1px 1px rgb(255, 255, 255);
+        font-weight: bolder;
+        font-size: 40px;
+        text-align: center;
+        
+       }
+       .blur{
+        filter: blur(5px);
+       }
+       .saturation{
+        filter: saturate(20%);
+       }
+       .hue{
+        filter:hue-rotate(200deg)
+       }
+       .contrast{
+        filter: contrast(200%);
+       }
+    </style>
+</head>
+<body>
+    <h1>box model</h1>
+    <div class="box">box
+    </div>
+    <div class="box">box</div>
+    <p> Every element in html is wrapped around a box. It consist of border, margin, padding and the actual content </p>
+    <ul>
+         <li>padding is space inside the border, around the content</li>
+         <li>margin is space outside the border</li>
+        <li>border is line around the content and padding</li>
+    </ul>
+    <h3>css outline</h3>
+    <p>outline is line drawn outside the border to make an element stand out</p>
+    <h1>text formatting</h1>
+    <ul>
+        <li>color</li>
+        <li>text-align</li>
+        <li>text-decoration</li>
+        <li>text-shadow</li>
+        <li>text-transformation: used to change text casing. ie uppercase, lowercase, capitalize etc. </li>
+        <li>text-spacing
+            <p>
+                letter-spacing:	Specifies the space between characters in a text
+            </p>
+            <p>line-height:	Specifies the gap between lines</p>
+            <p>text-indent:	Specifies the indentation of the first line in a text-block </p>
+            <p>white-space:	Specifies how to handle white-space inside an element</p>
+            <p>word-spacing:	Specifies the space between words in a text</p>
+        </li>
+    </ul>
+    <h1>color gradients</h1>
+    <div class="gradient linear">linear gradient</div>
+    <div class="gradient radial">radial gradient</div>
+    <div class="gradient conic">conic gradient</div>
+   
+    <h1>fonts</h1>
+        <p>css font family: examples of css</p>
+        <p>css font sizes</p>
+    <h1>measurement units</h1>
+    <p>measurement units in css include: cm, pt, px, em, rem, vh, vh, %, vmin & vmax.</p>
+    <h1>position</h1>
+    <p>There are 5 major positions in css</p>
+    <ul>
+        <li>Absolute</li>
+        <li>fixed</li>
+        <li>static</li>
+        <li>relative</li>
+        <li>sticky</li>
+    </ul>
+    <h1>web layouts</h1>
+ 
+    <li>header</li>
+    <li>navbar</li>
+    <li>main</li>
+    <li>aside</li>
+    <li>article</li>
+    <li>footer</li>
+    etc
+   <h1>display</h1>
+    <li>block</li>
+    <li>inline-block</li>
+    <li>inline</li>
+    <li>flex-box</li>
+    <li>grid</li>
+    <h1>Moving things with css</h1>
+    <li>animation</li>
+    <div class="animate"></div>
+    <div class="animate"></div>
+    <div class="animate"></div>
+    <li>transition</li>
+    <div class="transit"></div>
+    <li>transform</li>
+    <div class="transform rotate">rotation</div>
+    <div class="transform skew">skew</div>
+    <div class="transform translate">translate</div>
+    <div class="transform scale">scale</div>
+    
+    <li>filter</li>
+    <p>blur</p>
+    <div class="blur filter">blur</div>
+    <p>saturate</p>
+    <div class="saturation filter">saturation</div>
+    <div class="hue filter">hue</div>
+    <div class="filter contrast">contrast</div>
+    <li></li>
+</body>
+</html>
